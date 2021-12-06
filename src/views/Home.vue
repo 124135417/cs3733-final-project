@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-row>
     <v-main>
       <br />
       <br />
@@ -17,8 +17,6 @@
           <v-btn @click="part()" text>
             <h4 class="mr-2">Login</h4>
           </v-btn>
-
-          
 
           <!-- <v-btn @click="goto('Administrator')" text>
             <h4 class="mr-2">Administrator</h4>
@@ -49,21 +47,30 @@
           </v-form>
           <v-card-actions>
             <v-spacer></v-spacer>
-            <v-btn color="green darken-1" text @click="loginFunc()"> Login </v-btn>
+            <v-btn color="green darken-1" text @click="loginFunc()">
+              Login
+            </v-btn>
           </v-card-actions>
         </v-card>
       </v-dialog>
     </v-main>
-  </v-app>
+    <v-row style="height: 230px"></v-row>
+    <v-card class="mt-10">
+      <v-card-actions >
+        <div></div>
+        <v-btn color="primary">add teammate</v-btn>
+      </v-card-actions>
+    </v-card>
+  </v-row>
 </template>
 
 <script>
 export default {
   data: () => ({
     login: false,
-    simpledb:{
-      "A":"Administrator",
-      "B":"Participant"
+    simpledb: {
+      A: "Administrator",
+      B: "Participant",
     },
     username: null,
   }),
@@ -80,7 +87,7 @@ export default {
       // console.log(this.username);
 
       // Go to the page.
-      this.$router.push({ name:this.simpledb[this.username] });
+      this.$router.push({ name: this.simpledb[this.username] });
     },
   },
 };

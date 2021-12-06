@@ -14,8 +14,8 @@
 
     <v-dialog v-model="dialog" width="600px">
       <v-card>
-        <v-card-title class="text-h5"> Create Assignment </v-card-title>
-        <v-card-text>Please enter your assginment here.</v-card-text>
+        <v-card-title class="text-h5"> Create Project </v-card-title>
+        <v-card-text>Please enter your project here.</v-card-text>
 
         <v-form>
           <v-container>

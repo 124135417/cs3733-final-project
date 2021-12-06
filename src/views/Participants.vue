@@ -2,9 +2,11 @@
   <v-container>
     <br />
     <h5 class="text-center">These are your projects</h5>
+
     <v-row>
-      <v-col cols="5">{{t}}</v-col>
-      <v-col><TaskList :tasks="t" /></v-col>
+      <v-col class="text-center"></v-col>
+      <!-- {{ simpledb }} -->
+      <v-col><TaskList :tasks="simpledb" /></v-col>
       <v-col></v-col>
     </v-row>
   </v-container>
@@ -38,18 +40,9 @@ export default {
       {
         projectName: "Project3",
         creator: "C",
-        tasks: ["task5", "task6"],
+        tasks: ["task5"],
       },
-      {
-        projectName: "Project4",
-        creator: "D",
-        tasks: ["task7", "task8", "task9", "task10"],
-      },
-      {
-        projectName: "Project5",
-        creator: "E",
-        tasks: ["task11", "task12", "task13"],
-      },
+
     ],
   }),
   methods: {
